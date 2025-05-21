@@ -37,7 +37,7 @@ fn wrap_text(text: &str, max_length: usize) -> String {
     let mut current_line = String::new();
 
     for word in words {
-        if current_line.len() + word.len() + 1 <= max_length {
+        if current_line.len() + word.len() < max_length {
             if !current_line.is_empty() {
                 current_line.push(' ');
             }
@@ -99,7 +99,10 @@ fn main() {
 
     if let Some(content) = json["choices"][0]["message"]["content"].as_str() {
         let wrapped_content = wrap_text(content, MAX_LINE_LENGTH);
-        println!("{}", OUTPUT_TEMPLATE.replace("{cow_fact}", &wrapped_content));
+        println!(
+            "{}",
+            OUTPUT_TEMPLATE.replace("{cow_fact}", &wrapped_content)
+        );
     } else {
         println!("Could not find content in response");
     }
