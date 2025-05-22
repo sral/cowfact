@@ -9,8 +9,8 @@ const OPENAI_API_KEY: &str = "OPENAI_API_KEY";
 const MAX_COMPLETION_TOKENS: u32 = 100;
 const BASE_API_URL: &str = "https://api.openai.com/v1";
 
-const PROMPT: &str = "You are a excited biologist specializing in the study of cows. 
-Tell an an amsuing fact about cows in one sentence. 
+const PROMPT: &str = "You are an excited biologist specializing in the study of cows. 
+Tell an amsuing fact about cows in one sentence. 
 The fact should be something that is not widely known and may include: 
  - popular culture (e.g. music, song lyrics, movies, books, etc.)
  - history (e.g. events, figures, notable cows etc.)
