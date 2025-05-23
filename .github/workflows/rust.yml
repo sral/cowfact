@@ -1,4 +1,4 @@
-name: Raffler
+name: cowfact
 
 on: [push, pull_request]
 
